@@ -47,7 +47,15 @@
         </ul>
 	</section>
     <?php endif; ?>
-
+    <?php $all_plugins = Typecho_Plugin::export(); ?>
+    <?php if (array_key_exists('Links', $all_plugins['activated'])): ?>
+    <section class="widget">
+        <h3 class="widget-title">Links</h3>
+        <ul class="widget-list">
+        <?php Links_Plugin::output("SHOW_TEXT", 10); ?>
+        </ul>
+    </section>
+    <?php endif; ?>
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowOther', $this->options->sidebarBlock)): ?>
 	<section class="widget">
 		<h3 class="widget-title"><?php _e('其它'); ?></h3>
