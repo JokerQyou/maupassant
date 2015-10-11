@@ -18,9 +18,12 @@
 						<a href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
 					</h2>
 				</heaer>
-				<date class="post-meta">
+				<date class="post-meta meta-date">
 					<?php $this->date('F j, Y'); ?>
 				</date>
+				<div class="post-meta meta-category">
+					，归类于 <?php $this->category(' '); ?>
+				</div>
 				<div class="post-content">
 					<?php $this->content('阅读剩余部分 -'); ?>
 				</div>

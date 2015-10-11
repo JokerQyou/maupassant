@@ -9,7 +9,7 @@
 				<?php $this->date('F j, Y'); ?>
 			</date>
 			<div class="post-meta meta-category">
-				归类于 <?php $this->category(' '); ?>
+				，归类于 <?php $this->category(' '); ?>
 			</div>
 			<div class="post-content">
 				<?php $this->content(); ?>
